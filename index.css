@@ -1,0 +1,76 @@
+<html>
+<head>
+<style>
+#head
+{
+	text-align：center;
+	color:black;
+	size:6;
+	border:50px;
+	background:#B0E0E6;
+	border:0 auto;
+	width:90%;
+	margin: 0 auto;
+}
+#head h1
+{
+	text-align：center;
+	margin: 0 auto;
+	padding: 10px;
+ 	margin: 10px;
+	color:#87CEEB;
+}
+
+ #menu{
+border:10px;
+}
+#menu ul {
+  margin: 20px;
+  padding: 20px;
+}
+#menu li a{
+padding: 2px;
+ margin: 2px;
+background-color:#9BBB38;/*菜单背景色*/
+}
+#menu li a:link{
+background-color:#F2F2E1;
+color:#E58712;/*链接颜色*/
+}
+
+#main h2
+{
+	size:4;
+	color:#8B0000;
+	margin: 20px;
+ 	 padding: 20px;
+}
+#main p
+{
+margin: 0 auto;
+color:#87CEEB;
+padding: 2px;
+margin: 2px;
+
+}
+#foster h2
+{
+	color:#8B0000;
+	margin: 20px;
+ 	 padding: 20px;
+}
+#foster h2 a
+{
+	color:#8B0000;
+	margin: 20px;
+ 	 padding: 20px;
+	text-decoration:none; /* 取消下划线 */
+}
+#foster li
+{
+
+}
+</style>
+</head>
+
+</html>

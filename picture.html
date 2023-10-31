@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片轮播</title>
+<style>
+*{margin:0px auto; padding:0px;}
+#kuangjia
+{width:900px; height:700px; border:black solid 3px; background-size:cover; background-repeat:no-repeat;}
+.t1
+{width:40px; height:40px; background-repeat:no-repeat; background-size:contain;cursor:pointer;}
+#t2
+{float:left; margin:205px 0px 0px 20px; background-image:url(zuo.png);}
+#t3
+{float:right; margin:205px 20px 0px 0px; background-image:url(you.png);}
+</style>
+</head>
+<body>
+<div id="kuangjia"><!--大div作为框架-->
+    <div class="t1" id="t2" οnclick="(dd(-1))"></div>
+    <div class="t1" id="t3" οnclick="(dd(1))"></div>
+</div>
+</body>
+</html>
+<script>
+var jh=new Array();
+jh[0]="url(material/1-1.jpg)";
+jh[1]="url(material/2-2.jpg)";
+jh[2]="url(material/3-3.jpg)";
+jh[3]="url(material/4-4.jpg)";
+jh[4]="url(material/5-5.jpg)";
+jh[5]="url(material/6-6.jpg)";
+jh[6]="url(material/7-7.jpg)";
+jh[7]="url(material/8-8.jpg)";
+
+var kj=document.getElementById("kuangjia");<!--获取框架div的标签，在下面进行更改背景-->
+var x=-1;<!--定义变量x，建立索引-->
+var l=jh.length;<!--获取集合中元素个数-->
+function lb()
+{
+    x++;
+    if (x==l)
+    {
+        x=0;
+    }
+    kj.style.backgroundImage=jh[x];
+    window.setTimeout("lb()",2000);<!--2s后再次播放集合中的图片-->
+}
+window.setTimeout("lb()",0);<!--开始进行轮播-->
+
+function dd(m)
+{
+    x=x+m;
+    if(x==l)    
+    {x=0;}
+    else if(x==-1)
+    {x=l;}
+    kj.style.backgroundImage=jh[x];
+}
+</script>
